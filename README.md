@@ -12,3 +12,8 @@ Berdasarkan lampiran di atas, dapat dilihat bahwa pertama-tama server akan mener
 Ketika kita mengubah port pada sisi client, kita secara tidak langsung memberi instruksi kepada client untuk terhubung ke server melalui port tersebut. Begitu juga sebaliknya. Oleh karena itu, client dan server harus memiliki port yang sama agar keduanya bisa saling berkomunikasi.
 
 Jika keduanya memiliki port yang berbeda, server dapat tetap berjalan dengan normal. Sebaliknya, client akan mengalami error karena tidak menemukan koneksi ke server.
+
+#### Commit 3
+![Commit 3](/img/commit3.png)
+
+Untuk melihat informasi mengenai sender dengan lebih detail, saya memodifikasi salah satu baris kode pada `server.rs` menjadi `bcast_tx.send(format!("{addr} : {text}"))`. Dengan begitu, saya dapat melihat IP dan port dari client yang melakukan pengiriman pesan.
